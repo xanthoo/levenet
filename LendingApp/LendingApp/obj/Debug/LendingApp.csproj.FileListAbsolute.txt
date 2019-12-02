@@ -1,0 +1,14 @@
+C:\Users\Constantine\source\repos\LendingApp\LendingApp\bin\Debug\LendingApp.exe.config
+C:\Users\Constantine\source\repos\LendingApp\LendingApp\bin\Debug\LendingApp.exe
+C:\Users\Constantine\source\repos\LendingApp\LendingApp\bin\Debug\LendingApp.pdb
+C:\Users\Constantine\source\repos\LendingApp\LendingApp\obj\Debug\LendingApp.csprojAssemblyReference.cache
+C:\Users\Constantine\source\repos\LendingApp\LendingApp\obj\Debug\LendingApp.Properties.Resources.resources
+C:\Users\Constantine\source\repos\LendingApp\LendingApp\obj\Debug\LendingApp.csproj.GenerateResource.cache
+C:\Users\Constantine\source\repos\LendingApp\LendingApp\obj\Debug\LendingApp.exe
+C:\Users\Constantine\source\repos\LendingApp\LendingApp\obj\Debug\LendingApp.pdb
+C:\Users\Constantine\source\repos\LendingApp\LendingApp\obj\Debug\LendingApp.LendingForm.resources
+C:\Users\Constantine\source\repos\LendingApp\LendingApp\bin\Debug\MySql.Data.dll
+C:\Users\Constantine\source\repos\LendingApp\LendingApp\bin\Debug\Phidget22.NET.dll
+C:\Users\Constantine\source\repos\LendingApp\LendingApp\bin\Debug\Phidget22.NET.pdb
+C:\Users\Constantine\source\repos\LendingApp\LendingApp\bin\Debug\Phidget22.NET.xml
+C:\Users\Constantine\source\repos\LendingApp\LendingApp\obj\Debug\LendingApp.csproj.CopyComplete
