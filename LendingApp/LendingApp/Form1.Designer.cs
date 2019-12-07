@@ -65,7 +65,9 @@
             // 
             // btnLendItem
             // 
+            this.btnLendItem.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.btnLendItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLendItem.ForeColor = System.Drawing.Color.Black;
             this.btnLendItem.Location = new System.Drawing.Point(526, 354);
             this.btnLendItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLendItem.Name = "btnLendItem";
@@ -73,6 +75,7 @@
             this.btnLendItem.TabIndex = 18;
             this.btnLendItem.Text = "Lend item";
             this.btnLendItem.UseVisualStyleBackColor = true;
+            this.btnLendItem.Click += new System.EventHandler(this.btnLendItem_Click);
             // 
             // groupBox3
             // 
@@ -95,7 +98,7 @@
             // 
             // cmbItemCondition
             // 
-            this.cmbItemCondition.BackColor = System.Drawing.Color.Linen;
+            this.cmbItemCondition.BackColor = System.Drawing.Color.White;
             this.cmbItemCondition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbItemCondition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbItemCondition.FormattingEnabled = true;
@@ -173,7 +176,9 @@
             // 
             // btnReturnItem
             // 
+            this.btnReturnItem.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.btnReturnItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturnItem.ForeColor = System.Drawing.Color.Black;
             this.btnReturnItem.Location = new System.Drawing.Point(526, 600);
             this.btnReturnItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnReturnItem.Name = "btnReturnItem";
@@ -255,7 +260,9 @@
             // 
             // btnScan
             // 
+            this.btnScan.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.btnScan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScan.ForeColor = System.Drawing.Color.Black;
             this.btnScan.Location = new System.Drawing.Point(526, 28);
             this.btnScan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnScan.Name = "btnScan";
@@ -399,8 +406,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnLendItem;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox cmbItemCondition;
         private System.Windows.Forms.Label label21;
@@ -410,7 +415,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Button btnReturnItem;
         private System.Windows.Forms.GroupBox gbItemInfo;
         private System.Windows.Forms.Label lblItemDeposit;
         private System.Windows.Forms.Label lblItemPricePerDay;
@@ -418,7 +422,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button btnScan;
         private System.Windows.Forms.GroupBox gbVisitorInfo;
         private System.Windows.Forms.Label lblDoB;
         private System.Windows.Forms.Label lblName;
@@ -429,6 +432,9 @@
         private System.Windows.Forms.Button btnBaterry;
         private System.Windows.Forms.Button btnAdapter;
         private System.Windows.Forms.ListBox lbBorrowedItems;
+        private System.Windows.Forms.Button btnLendItem;
+        private System.Windows.Forms.Button btnReturnItem;
+        private System.Windows.Forms.Button btnScan;
     }
 }
 

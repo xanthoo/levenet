@@ -21,6 +21,7 @@ namespace LendingApp
 
             gbVisitorInfo.Hide();
             gbItemInfo.Hide();
+            btnLendItem.Hide();
 
             try
             {
@@ -69,6 +70,7 @@ namespace LendingApp
             lblItemDeposit.Text = (item.PricePerDay * 5).ToString();
 
             gbItemInfo.Show();
+            btnLendItem.Show();
         }
 
         private void btnBaterry_Click(object sender, EventArgs e)
@@ -80,6 +82,7 @@ namespace LendingApp
             lblItemDeposit.Text = (item.PricePerDay * 5).ToString();
 
             gbItemInfo.Show();
+            btnLendItem.Show();
         }
 
         private void btnFridgeBox_Click(object sender, EventArgs e)
@@ -91,6 +94,7 @@ namespace LendingApp
             lblItemDeposit.Text = (item.PricePerDay * 5).ToString();
 
             gbItemInfo.Show();
+            btnLendItem.Show();
         }
 
         private void btnPolaroid_Click(object sender, EventArgs e)
@@ -102,6 +106,12 @@ namespace LendingApp
             lblItemDeposit.Text = (item.PricePerDay * 5).ToString();
 
             gbItemInfo.Show();
+            btnLendItem.Show();
+        }
+
+        private void btnLendItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
