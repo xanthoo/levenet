@@ -11,11 +11,16 @@ namespace LendingApp
 
         private User currentUser;
 
+        private Item item;
+
         public LendingForm()
         {
             InitializeComponent();
 
             DBHelper.initialize();
+
+            gbVisitorInfo.Hide();
+            gbItemInfo.Hide();
 
             try
             {
@@ -29,17 +34,17 @@ namespace LendingApp
         {
             try
             {
-                rfidReader.Open(); //if successfully, it will call the Attach-event.
+                rfidReader.Open(); //if successful, it will call the Attach-event.
             }
-            catch (PhidgetException) { Console.WriteLine("No RFID reader opened"); }
+            catch (PhidgetException) { MessageBox.Show("No RFID reader opened"); }
+
         }
 
         private void HandleTag(object sender, RFIDTagEventArgs e)
         {
             String tag = e.Tag;
 
-            Console.WriteLine(tag);
-
+            //Console.WriteLine(tag);
             LoadVisitorInfo(tag);
         }
 
@@ -49,6 +54,54 @@ namespace LendingApp
 
             lblName.Text = currentUser.Name;
             lblDoB.Text = currentUser.DoB.ToString("dd-MM-yyyy");
+
+            gbVisitorInfo.Show();
+
+            rfidReader.Close();
+        }
+
+        private void btnAdapter_Click(object sender, EventArgs e)
+        {
+            item = DBHelper.getItemInfo("adapter");
+
+            lblHourPrice.Text = item.PricePerHour.ToString();
+            lblItemPricePerDay.Text = item.PricePerDay.ToString();
+            lblItemDeposit.Text = (item.PricePerDay * 5).ToString();
+
+            gbItemInfo.Show();
+        }
+
+        private void btnBaterry_Click(object sender, EventArgs e)
+        {
+            item = DBHelper.getItemInfo("battery");
+
+            lblHourPrice.Text = item.PricePerHour.ToString();
+            lblItemPricePerDay.Text = item.PricePerDay.ToString();
+            lblItemDeposit.Text = (item.PricePerDay * 5).ToString();
+
+            gbItemInfo.Show();
+        }
+
+        private void btnFridgeBox_Click(object sender, EventArgs e)
+        {
+            item = DBHelper.getItemInfo("fridge_box");
+
+            lblHourPrice.Text = item.PricePerHour.ToString();
+            lblItemPricePerDay.Text = item.PricePerDay.ToString();
+            lblItemDeposit.Text = (item.PricePerDay * 5).ToString();
+
+            gbItemInfo.Show();
+        }
+
+        private void btnPolaroid_Click(object sender, EventArgs e)
+        {
+            item = DBHelper.getItemInfo("polaroid");
+
+            lblHourPrice.Text = item.PricePerHour.ToString();
+            lblItemPricePerDay.Text = item.PricePerDay.ToString();
+            lblItemDeposit.Text = (item.PricePerDay * 5).ToString();
+
+            gbItemInfo.Show();
         }
     }
 }

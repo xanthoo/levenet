@@ -40,7 +40,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.btnReturnItem = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbItemInfo = new System.Windows.Forms.GroupBox();
             this.lblItemDeposit = new System.Windows.Forms.Label();
             this.lblItemPricePerDay = new System.Windows.Forms.Label();
             this.lblHourPrice = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@
             this.btnAdapter = new System.Windows.Forms.Button();
             this.lbBorrowedItems = new System.Windows.Forms.ListBox();
             this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbItemInfo.SuspendLayout();
             this.gbVisitorInfo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -182,22 +182,22 @@
             this.btnReturnItem.Text = "Return item";
             this.btnReturnItem.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // gbItemInfo
             // 
-            this.groupBox2.Controls.Add(this.lblItemDeposit);
-            this.groupBox2.Controls.Add(this.lblItemPricePerDay);
-            this.groupBox2.Controls.Add(this.lblHourPrice);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Location = new System.Drawing.Point(469, 218);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(225, 116);
-            this.groupBox2.TabIndex = 14;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Item price info";
+            this.gbItemInfo.Controls.Add(this.lblItemDeposit);
+            this.gbItemInfo.Controls.Add(this.lblItemPricePerDay);
+            this.gbItemInfo.Controls.Add(this.lblHourPrice);
+            this.gbItemInfo.Controls.Add(this.label14);
+            this.gbItemInfo.Controls.Add(this.label15);
+            this.gbItemInfo.Controls.Add(this.label16);
+            this.gbItemInfo.Location = new System.Drawing.Point(469, 218);
+            this.gbItemInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbItemInfo.Name = "gbItemInfo";
+            this.gbItemInfo.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbItemInfo.Size = new System.Drawing.Size(225, 116);
+            this.gbItemInfo.TabIndex = 14;
+            this.gbItemInfo.TabStop = false;
+            this.gbItemInfo.Text = "Item info";
             // 
             // lblItemDeposit
             // 
@@ -322,6 +322,7 @@
             this.btnPolaroid.Size = new System.Drawing.Size(192, 174);
             this.btnPolaroid.TabIndex = 22;
             this.btnPolaroid.UseVisualStyleBackColor = true;
+            this.btnPolaroid.Click += new System.EventHandler(this.btnPolaroid_Click);
             // 
             // btnFridgeBox
             // 
@@ -333,6 +334,7 @@
             this.btnFridgeBox.Size = new System.Drawing.Size(193, 174);
             this.btnFridgeBox.TabIndex = 21;
             this.btnFridgeBox.UseVisualStyleBackColor = true;
+            this.btnFridgeBox.Click += new System.EventHandler(this.btnFridgeBox_Click);
             // 
             // btnBaterry
             // 
@@ -344,6 +346,7 @@
             this.btnBaterry.Size = new System.Drawing.Size(192, 170);
             this.btnBaterry.TabIndex = 20;
             this.btnBaterry.UseVisualStyleBackColor = true;
+            this.btnBaterry.Click += new System.EventHandler(this.btnBaterry_Click);
             // 
             // btnAdapter
             // 
@@ -356,6 +359,7 @@
             this.btnAdapter.Size = new System.Drawing.Size(193, 170);
             this.btnAdapter.TabIndex = 19;
             this.btnAdapter.UseVisualStyleBackColor = false;
+            this.btnAdapter.Click += new System.EventHandler(this.btnAdapter_Click);
             // 
             // lbBorrowedItems
             // 
@@ -379,7 +383,7 @@
             this.Controls.Add(this.btnLendItem);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnReturnItem);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbItemInfo);
             this.Controls.Add(this.btnScan);
             this.Controls.Add(this.gbVisitorInfo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -387,8 +391,8 @@
             this.Text = "Event";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbItemInfo.ResumeLayout(false);
+            this.gbItemInfo.PerformLayout();
             this.gbVisitorInfo.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -407,7 +411,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btnReturnItem;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbItemInfo;
         private System.Windows.Forms.Label lblItemDeposit;
         private System.Windows.Forms.Label lblItemPricePerDay;
         private System.Windows.Forms.Label lblHourPrice;

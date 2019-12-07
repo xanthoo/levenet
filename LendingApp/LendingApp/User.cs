@@ -14,7 +14,7 @@ namespace LendingApp
         public decimal Credit { get; }
         public bool HasLoanedItem { get; set; }
 
-        public User(int id, string name, DateTime dob, decimal credit, bool hasLoanedItem)
+        public User(int id, String name, DateTime dob, decimal credit, bool hasLoanedItem)
         {
             this.ID = id;
             this.Name = name;
@@ -23,7 +23,7 @@ namespace LendingApp
             this.HasLoanedItem = hasLoanedItem;
         }
 
-        public override string ToString()
+        public override String ToString()
         {
             return "ID: " + ID +
                    ", Name: " + Name +

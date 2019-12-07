@@ -68,5 +68,55 @@ namespace LendingApp
                 connection.Close();
             }
         }
+
+        public static Item getItemInfo(string type)
+        {
+            String itemSql = "Select * FROM `items` i " +
+                         $"WHERE i.name = '{type}';";
+
+            Console.WriteLine("SQL: " + itemSql);
+
+            MySqlCommand command = new MySqlCommand(itemSql, connection);
+            try
+            {
+                connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+
+                int id = -1;
+                String name = "";
+                decimal pricePerHour = 0;
+                decimal pricePerDay = 0;
+                int borrowedBy = -1;
+
+                while (reader.Read())
+                {
+                    id = Convert.ToInt32(reader["item_id"]);
+                    name = Convert.ToString(reader["name"]);
+                    pricePerHour = Convert.ToDecimal(reader["price_per_Hour"]);
+                    pricePerDay = Convert.ToDecimal(reader["price_per_day"]);
+
+                    if(reader["borrowed_by"] != DBNull.Value)
+                    {
+                        borrowedBy = Convert.ToInt32(reader["borrowed_by"]);
+                    }
+                }
+
+                Item item = new Item(id, name, pricePerHour, pricePerDay, borrowedBy);
+
+                Console.WriteLine(item);
+
+                return item;
+            }
+            catch (Exception ex1)
+            {
+                Console.WriteLine(ex1.Message);
+
+                return null;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }
