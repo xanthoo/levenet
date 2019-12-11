@@ -58,6 +58,7 @@
             this.btnBaterry = new System.Windows.Forms.Button();
             this.btnAdapter = new System.Windows.Forms.Button();
             this.lbBorrowedItems = new System.Windows.Forms.ListBox();
+            this.lblNoItems = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.gbItemInfo.SuspendLayout();
             this.gbVisitorInfo.SuspendLayout();
@@ -100,7 +101,6 @@
             // 
             this.cmbItemCondition.BackColor = System.Drawing.Color.White;
             this.cmbItemCondition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbItemCondition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbItemCondition.FormattingEnabled = true;
             this.cmbItemCondition.Items.AddRange(new object[] {
             "Good",
@@ -376,12 +376,23 @@
             this.lbBorrowedItems.Size = new System.Drawing.Size(416, 212);
             this.lbBorrowedItems.TabIndex = 23;
             // 
+            // lblNoItems
+            // 
+            this.lblNoItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoItems.Location = new System.Drawing.Point(22, 426);
+            this.lblNoItems.Name = "lblNoItems";
+            this.lblNoItems.Size = new System.Drawing.Size(419, 212);
+            this.lblNoItems.TabIndex = 24;
+            this.lblNoItems.Text = "No items borrowed";
+            this.lblNoItems.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // LendingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(736, 657);
+            this.Controls.Add(this.lblNoItems);
             this.Controls.Add(this.lbBorrowedItems);
             this.Controls.Add(this.btnPolaroid);
             this.Controls.Add(this.btnFridgeBox);
@@ -435,6 +446,7 @@
         private System.Windows.Forms.Button btnLendItem;
         private System.Windows.Forms.Button btnReturnItem;
         private System.Windows.Forms.Button btnScan;
+        private System.Windows.Forms.Label lblNoItems;
     }
 }
 

@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 
 namespace LendingApp
 {
@@ -72,7 +73,8 @@ namespace LendingApp
         public static Item getItemInfo(string type)
         {
             String itemSql = "Select * FROM `items` i " +
-                         $"WHERE i.name = '{type}';";
+                         $"WHERE i.name = '{type}' " +
+                         "AND i.borrowed_by IS NULL;";
 
             Console.WriteLine("SQL: " + itemSql);
 
@@ -87,6 +89,7 @@ namespace LendingApp
                 decimal pricePerHour = 0;
                 decimal pricePerDay = 0;
                 int borrowedBy = -1;
+                DateTime borrowedDate = DateTime.MinValue;
 
                 while (reader.Read())
                 {
@@ -99,9 +102,13 @@ namespace LendingApp
                     {
                         borrowedBy = Convert.ToInt32(reader["borrowed_by"]);
                     }
+                    else
+                    {
+                        borrowedBy = 10;
+                    }
                 }
 
-                Item item = new Item(id, name, pricePerHour, pricePerDay, borrowedBy);
+                Item item = new Item(id, name, pricePerHour, pricePerDay, borrowedBy, borrowedDate);
 
                 Console.WriteLine(item);
 
@@ -117,6 +124,109 @@ namespace LendingApp
             {
                 connection.Close();
             }
+        }
+
+        public static List<Item> getLoanedItems(int userID)
+        {
+            String getItemsSQL = "Select * FROM `items` i " +
+                         $"WHERE i.borrowed_by = '{userID}';";
+
+            Console.WriteLine("SQL: " + getItemsSQL);
+
+            MySqlCommand command = new MySqlCommand(getItemsSQL, connection);
+            try
+            {
+                connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+
+                int id = -1;
+                String name = "";
+                decimal pricePerHour = 0;
+                decimal pricePerDay = 0;
+                int borrowedBy = -1;
+                DateTime borrowedDate = DateTime.MinValue;
+
+                List<Item> loanedItems = new List<Item>();
+
+                while (reader.Read())
+                {
+                    id = Convert.ToInt32(reader["item_id"]);
+                    name = Convert.ToString(reader["name"]);
+                    pricePerHour = Convert.ToDecimal(reader["price_per_Hour"]);
+                    pricePerDay = Convert.ToDecimal(reader["price_per_day"]);
+                    borrowedBy = Convert.ToInt32(reader["borrowed_by"]);
+                    borrowedDate = Convert.ToDateTime(reader["borrowed_date"]);
+
+                    Item currentItem = new Item(id, name, pricePerHour, pricePerDay, borrowedBy, borrowedDate);
+
+                    Console.WriteLine(currentItem);
+
+                    loanedItems.Add(currentItem);
+                }
+
+                return loanedItems;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+
+                return null;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+
+        public static bool borrowItem(Item item, User user)
+        {
+            DateTime time = DateTime.Now;
+            string format = "yyyy-MM-dd HH:mm";
+
+            String borrowItemSQL = "UPDATE `items` i " +
+                             $"SET i.borrowed_by = '{user.ID}', i.borrowed_date = '" + time.ToString(format) + "' " +
+                             $"WHERE i.item_id = '{item.ID}';";
+
+            try
+            {
+                executeQuery(borrowItemSQL);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
+        public static bool setHasLoanedItem(User user)
+        {
+            String itemLoan = "UPDATE `users` u " +
+                             $"SET u.has_loaned_item = 1 " +
+                             $"WHERE u.id= '{user.ID}';";
+
+            try
+            {
+                executeQuery(itemLoan);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
+        private static void executeQuery(String query)
+        {
+            MySqlCommand command = new MySqlCommand(query, connection);
+
+            connection.Open();
+            MySqlDataReader reader = command.ExecuteReader();
+
+            connection.Close();          
         }
     }
 }

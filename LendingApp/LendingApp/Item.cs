@@ -13,14 +13,16 @@ namespace LendingApp
         public decimal PricePerHour { get; private set; }
         public decimal PricePerDay { get; private set; }
         public int BorrowedBy { get; private set; }
+        public DateTime BorrowedDate { get; private set; }
 
-        public Item(int id, String name, decimal pricePerHour, decimal pricePerDay, int borrowedBy)
+        public Item(int id, String name, decimal pricePerHour, decimal pricePerDay, int borrowedBy, DateTime borrowedDate)
         {
             this.ID = id;
             this.Name = name;
             this.PricePerHour = pricePerHour;
             this.PricePerDay = pricePerDay;
             this.BorrowedBy = borrowedBy;
+            this.BorrowedDate = borrowedDate;
         }
 
         public override string ToString()
