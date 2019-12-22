@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LendingForm));
             this.btnLendItem = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.gbSelectedItem = new System.Windows.Forms.GroupBox();
             this.cmbItemCondition = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.lblReturnHours = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@
             this.btnAdapter = new System.Windows.Forms.Button();
             this.lbBorrowedItems = new System.Windows.Forms.ListBox();
             this.lblNoItems = new System.Windows.Forms.Label();
-            this.groupBox3.SuspendLayout();
+            this.gbSelectedItem.SuspendLayout();
             this.gbItemInfo.SuspendLayout();
             this.gbVisitorInfo.SuspendLayout();
             this.SuspendLayout();
@@ -78,24 +78,24 @@
             this.btnLendItem.UseVisualStyleBackColor = true;
             this.btnLendItem.Click += new System.EventHandler(this.btnLendItem_Click);
             // 
-            // groupBox3
+            // gbSelectedItem
             // 
-            this.groupBox3.Controls.Add(this.cmbItemCondition);
-            this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.lblReturnHours);
-            this.groupBox3.Controls.Add(this.lblTotalReturnPrice);
-            this.groupBox3.Controls.Add(this.lblReturnDays);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Location = new System.Drawing.Point(469, 426);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(225, 147);
-            this.groupBox3.TabIndex = 16;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Selected Item";
+            this.gbSelectedItem.Controls.Add(this.cmbItemCondition);
+            this.gbSelectedItem.Controls.Add(this.label21);
+            this.gbSelectedItem.Controls.Add(this.lblReturnHours);
+            this.gbSelectedItem.Controls.Add(this.lblTotalReturnPrice);
+            this.gbSelectedItem.Controls.Add(this.lblReturnDays);
+            this.gbSelectedItem.Controls.Add(this.label18);
+            this.gbSelectedItem.Controls.Add(this.label19);
+            this.gbSelectedItem.Controls.Add(this.label20);
+            this.gbSelectedItem.Location = new System.Drawing.Point(469, 426);
+            this.gbSelectedItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbSelectedItem.Name = "gbSelectedItem";
+            this.gbSelectedItem.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbSelectedItem.Size = new System.Drawing.Size(225, 147);
+            this.gbSelectedItem.TabIndex = 16;
+            this.gbSelectedItem.TabStop = false;
+            this.gbSelectedItem.Text = "Selected Item";
             // 
             // cmbItemCondition
             // 
@@ -122,30 +122,27 @@
             // 
             // lblReturnHours
             // 
-            this.lblReturnHours.AutoSize = true;
-            this.lblReturnHours.Location = new System.Drawing.Point(123, 31);
+            this.lblReturnHours.Location = new System.Drawing.Point(94, 31);
             this.lblReturnHours.Name = "lblReturnHours";
-            this.lblReturnHours.Size = new System.Drawing.Size(41, 13);
+            this.lblReturnHours.Size = new System.Drawing.Size(87, 13);
             this.lblReturnHours.TabIndex = 7;
-            this.lblReturnHours.Text = "label17";
+            this.lblReturnHours.Text = "4";
             // 
             // lblTotalReturnPrice
             // 
-            this.lblTotalReturnPrice.AutoSize = true;
-            this.lblTotalReturnPrice.Location = new System.Drawing.Point(123, 90);
+            this.lblTotalReturnPrice.Location = new System.Drawing.Point(94, 90);
             this.lblTotalReturnPrice.Name = "lblTotalReturnPrice";
-            this.lblTotalReturnPrice.Size = new System.Drawing.Size(35, 13);
+            this.lblTotalReturnPrice.Size = new System.Drawing.Size(87, 13);
             this.lblTotalReturnPrice.TabIndex = 6;
-            this.lblTotalReturnPrice.Text = "label9";
+            this.lblTotalReturnPrice.Text = "69";
             // 
             // lblReturnDays
             // 
-            this.lblReturnDays.AutoSize = true;
-            this.lblReturnDays.Location = new System.Drawing.Point(123, 59);
+            this.lblReturnDays.Location = new System.Drawing.Point(94, 59);
             this.lblReturnDays.Name = "lblReturnDays";
-            this.lblReturnDays.Size = new System.Drawing.Size(41, 13);
+            this.lblReturnDays.Size = new System.Drawing.Size(87, 13);
             this.lblReturnDays.TabIndex = 5;
-            this.lblReturnDays.Text = "label13";
+            this.lblReturnDays.Text = "1";
             // 
             // label18
             // 
@@ -186,6 +183,7 @@
             this.btnReturnItem.TabIndex = 17;
             this.btnReturnItem.Text = "Return item";
             this.btnReturnItem.UseVisualStyleBackColor = true;
+            this.btnReturnItem.Click += new System.EventHandler(this.btnReturnItem_Click);
             // 
             // gbItemInfo
             // 
@@ -206,30 +204,27 @@
             // 
             // lblItemDeposit
             // 
-            this.lblItemDeposit.AutoSize = true;
-            this.lblItemDeposit.Location = new System.Drawing.Point(123, 90);
+            this.lblItemDeposit.Location = new System.Drawing.Point(94, 90);
             this.lblItemDeposit.Name = "lblItemDeposit";
-            this.lblItemDeposit.Size = new System.Drawing.Size(41, 13);
+            this.lblItemDeposit.Size = new System.Drawing.Size(79, 13);
             this.lblItemDeposit.TabIndex = 6;
-            this.lblItemDeposit.Text = "label10";
+            this.lblItemDeposit.Text = "225";
             // 
             // lblItemPricePerDay
             // 
-            this.lblItemPricePerDay.AutoSize = true;
-            this.lblItemPricePerDay.Location = new System.Drawing.Point(123, 59);
+            this.lblItemPricePerDay.Location = new System.Drawing.Point(94, 59);
             this.lblItemPricePerDay.Name = "lblItemPricePerDay";
-            this.lblItemPricePerDay.Size = new System.Drawing.Size(41, 13);
+            this.lblItemPricePerDay.Size = new System.Drawing.Size(79, 13);
             this.lblItemPricePerDay.TabIndex = 5;
-            this.lblItemPricePerDay.Text = "label11";
+            this.lblItemPricePerDay.Text = "45";
             // 
             // lblHourPrice
             // 
-            this.lblHourPrice.AutoSize = true;
-            this.lblHourPrice.Location = new System.Drawing.Point(123, 31);
+            this.lblHourPrice.Location = new System.Drawing.Point(94, 31);
             this.lblHourPrice.Name = "lblHourPrice";
-            this.lblHourPrice.Size = new System.Drawing.Size(41, 13);
+            this.lblHourPrice.Size = new System.Drawing.Size(79, 13);
             this.lblHourPrice.TabIndex = 4;
-            this.lblHourPrice.Text = "label12";
+            this.lblHourPrice.Text = "15";
             // 
             // label14
             // 
@@ -375,6 +370,7 @@
             this.lbBorrowedItems.Name = "lbBorrowedItems";
             this.lbBorrowedItems.Size = new System.Drawing.Size(416, 212);
             this.lbBorrowedItems.TabIndex = 23;
+            this.lbBorrowedItems.SelectedIndexChanged += new System.EventHandler(this.lbBorrowedItems_SelectedIndexChanged);
             // 
             // lblNoItems
             // 
@@ -392,23 +388,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(736, 657);
-            this.Controls.Add(this.lblNoItems);
-            this.Controls.Add(this.lbBorrowedItems);
             this.Controls.Add(this.btnPolaroid);
             this.Controls.Add(this.btnFridgeBox);
             this.Controls.Add(this.btnBaterry);
             this.Controls.Add(this.btnAdapter);
             this.Controls.Add(this.btnLendItem);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.gbSelectedItem);
             this.Controls.Add(this.btnReturnItem);
             this.Controls.Add(this.gbItemInfo);
             this.Controls.Add(this.btnScan);
             this.Controls.Add(this.gbVisitorInfo);
+            this.Controls.Add(this.lbBorrowedItems);
+            this.Controls.Add(this.lblNoItems);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LendingForm";
             this.Text = "Event";
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gbSelectedItem.ResumeLayout(false);
+            this.gbSelectedItem.PerformLayout();
             this.gbItemInfo.ResumeLayout(false);
             this.gbItemInfo.PerformLayout();
             this.gbVisitorInfo.ResumeLayout(false);
@@ -417,7 +413,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox gbSelectedItem;
         private System.Windows.Forms.ComboBox cmbItemCondition;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label lblReturnHours;

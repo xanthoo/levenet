@@ -13,7 +13,7 @@ namespace LendingApp
         public decimal PricePerHour { get; private set; }
         public decimal PricePerDay { get; private set; }
         public int BorrowedBy { get; private set; }
-        public DateTime BorrowedDate { get; private set; }
+        public DateTime BorrowedDate { get; set; }
 
         public Item(int id, String name, decimal pricePerHour, decimal pricePerDay, int borrowedBy, DateTime borrowedDate)
         {
@@ -27,11 +27,19 @@ namespace LendingApp
 
         public override string ToString()
         {
-            return "ID: " + ID +
-                   ", Name: " + Name +
-                   ", PricePerHour: " + PricePerHour +
-                   ", PricePerDay: " + PricePerDay +
-                   ", BorrowedBy: " + BorrowedBy;
+            switch (Name)
+            {
+                case "polaroid":
+                    return "Polaroid";
+                case "fridge_box":
+                    return "Fridge box";
+                case "battery":
+                    return "Battery";
+                case "adapter":
+                    return "Adapter";
+                default:
+                    return "Unknown";
+            }
         }
     }
 }
