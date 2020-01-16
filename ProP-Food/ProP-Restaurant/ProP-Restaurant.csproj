@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7D587827-7ED2-4E9E-BBCB-FEFF6C1165B7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProP_Restaurant</RootNamespace>
+    <AssemblyName>ProP-Restaurant</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Devart.Data, Version=5.0.2333.0, Culture=neutral, PublicKeyToken=09af7300eec23701" />
+    <Reference Include="Devart.Data.MySql, Version=8.16.1541.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\University\GIT\levent_prop_apps\LendingApp\LendingApp\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Phidget22.NET, Version=1.1.5.8, Culture=neutral, PublicKeyToken=aefa9ee0bcd237af, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Phidgets\Phidget22\Phidget22.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlcoholicDrink.cs" />
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="dbi410674DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbi410674DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Desert.cs" />
+    <Compile Include="Food.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Burger.cs" />
+    <Compile Include="FrenchFries.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderLines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderLines.Designer.cs">
+      <DependentUpon>OrderLines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderList.cs" />
+    <Compile Include="Pizza.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop.cs" />
+    <Compile Include="SoftDrink.cs" />
+    <Compile Include="User.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderLines.resx">
+      <DependentUpon>OrderLines.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="dbi410674DataSet.xsc">
+      <DependentUpon>dbi410674DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbi410674DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbi410674DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbi410674DataSet.xss">
+      <DependentUpon>dbi410674DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desert.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fries.resized.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\burger.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cheeseburger.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hamburger.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Veggie Burger.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\americana.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diavola.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prosciutto.resized.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\romana.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tonno.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CocaColaCan.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\softdrinks.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alcoholic drinks.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizza.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PepsiCan.Cropped.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FantaCan.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DrPepperCan.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpriteCan.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7UpCan.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LeventBeer.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KirRoyale.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mojito.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheeseCake.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desert.resized1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IceCream.resized.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tiramisu.resized.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

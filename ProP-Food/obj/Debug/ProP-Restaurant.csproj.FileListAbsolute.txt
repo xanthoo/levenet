@@ -1,0 +1,23 @@
+D:\University\ProP\Restaurant\ProP-Restaurant\ProP-Restaurant\bin\Debug\ProP-Restaurant.exe.config
+D:\University\ProP\Restaurant\ProP-Restaurant\ProP-Restaurant\bin\Debug\ProP-Restaurant.exe
+D:\University\ProP\Restaurant\ProP-Restaurant\ProP-Restaurant\bin\Debug\ProP-Restaurant.pdb
+D:\University\ProP\Restaurant\ProP-Restaurant\ProP-Restaurant\obj\Debug\ProP-Restaurant.csprojAssemblyReference.cache
+D:\University\ProP\Restaurant\ProP-Restaurant\ProP-Restaurant\obj\Debug\ProP_Restaurant.Form1.resources
+D:\University\ProP\Restaurant\ProP-Restaurant\ProP-Restaurant\obj\Debug\ProP_Restaurant.Properties.Resources.resources
+D:\University\ProP\Restaurant\ProP-Restaurant\ProP-Restaurant\obj\Debug\ProP-Restaurant.csproj.GenerateResource.cache
+D:\University\ProP\Restaurant\ProP-Restaurant\ProP-Restaurant\obj\Debug\ProP-Restaurant.exe
+D:\University\ProP\Restaurant\ProP-Restaurant\ProP-Restaurant\obj\Debug\ProP-Restaurant.pdb
+D:\University\ProP\Restaurant\ProP-Restaurant\ProP-Restaurant\obj\Debug\ProP_Restaurant.Order.resources
+C:\Users\Jelle Schroijen\source\repos\ProP-Restaurant\ProP-Restaurant\bin\Debug\ProP-Restaurant.exe.config
+C:\Users\Jelle Schroijen\source\repos\ProP-Restaurant\ProP-Restaurant\bin\Debug\ProP-Restaurant.exe
+C:\Users\Jelle Schroijen\source\repos\ProP-Restaurant\ProP-Restaurant\bin\Debug\ProP-Restaurant.pdb
+C:\Users\Jelle Schroijen\source\repos\ProP-Restaurant\ProP-Restaurant\obj\Debug\ProP-Restaurant.csprojAssemblyReference.cache
+C:\Users\Jelle Schroijen\source\repos\ProP-Restaurant\ProP-Restaurant\obj\Debug\ProP_Restaurant.Form1.resources
+C:\Users\Jelle Schroijen\source\repos\ProP-Restaurant\ProP-Restaurant\obj\Debug\ProP_Restaurant.Order.resources
+C:\Users\Jelle Schroijen\source\repos\ProP-Restaurant\ProP-Restaurant\obj\Debug\ProP_Restaurant.Properties.Resources.resources
+C:\Users\Jelle Schroijen\source\repos\ProP-Restaurant\ProP-Restaurant\obj\Debug\ProP-Restaurant.csproj.GenerateResource.cache
+C:\Users\Jelle Schroijen\source\repos\ProP-Restaurant\ProP-Restaurant\obj\Debug\ProP-Restaurant.csproj.CoreCompileInputs.cache
+C:\Users\Jelle Schroijen\source\repos\ProP-Restaurant\ProP-Restaurant\obj\Debug\ProP-Restaurant.exe
+C:\Users\Jelle Schroijen\source\repos\ProP-Restaurant\ProP-Restaurant\obj\Debug\ProP-Restaurant.pdb
+C:\Users\Jelle Schroijen\source\repos\ProP-Restaurant\ProP-Restaurant\obj\Debug\ProP_Restaurant.Controls.CreateOrder.SelectBurger.resources
+C:\Users\Jelle Schroijen\source\repos\ProP-Restaurant\ProP-Restaurant\obj\Debug\ProP_Restaurant.Controls.SelectType.resources
