@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Phidget22;
-using Phidget22.Events;
 using AForge.Video;
 using AForge.Video.DirectShow;
 using ZXing;
@@ -17,19 +9,15 @@ namespace EntranceLeavingApp
 {
     public partial class CodeScanner : Form
     {
-
         public static int qr_code_result = 0;
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice captureDevice;
         public Ticket currentTicket;
 
-
         public CodeScanner()
         {
             InitializeComponent();
         }
-
-       
 
         private void CodeScanner_Load(object sender, EventArgs e)
         {
@@ -45,7 +33,6 @@ namespace EntranceLeavingApp
             captureDevice.NewFrame += CaptureDevice_NewFrame;
             captureDevice.Start();
             timer1.Start();
-
         }
 
         private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
@@ -55,15 +42,10 @@ namespace EntranceLeavingApp
 
         private void CodeScanner_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //if(captureDevice!=null)
-            //{
             if (captureDevice.IsRunning)
-            { captureDevice.Stop();
+            {
+                captureDevice.Stop();
             }
-            //}
-
-           //Hide();
-           //e.Cancel = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -75,8 +57,9 @@ namespace EntranceLeavingApp
                 if(result!=null)
                 {
                     txtQRcode.Text = result.ToString();
-                    qr_code_result = Convert.ToInt32(txtQRcode.Text);
+                    qr_code_result = Convert.ToInt32(txtQRcode.Text);                    
                     this.Hide();
+                    this.DialogResult = DialogResult.OK;
                 }
             }
         }
