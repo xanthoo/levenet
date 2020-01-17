@@ -1,0 +1,11 @@
+D:\University\ProP\ProP-Status\ProP-Status\bin\Debug\ProP-Status.exe.config
+D:\University\ProP\ProP-Status\ProP-Status\bin\Debug\ProP-Status.exe
+D:\University\ProP\ProP-Status\ProP-Status\bin\Debug\ProP-Status.pdb
+D:\University\ProP\ProP-Status\ProP-Status\obj\Debug\ProP-Status.csprojAssemblyReference.cache
+D:\University\ProP\ProP-Status\ProP-Status\obj\Debug\ProP_Status.Form1.resources
+D:\University\ProP\ProP-Status\ProP-Status\obj\Debug\ProP_Status.Properties.Resources.resources
+D:\University\ProP\ProP-Status\ProP-Status\obj\Debug\ProP-Status.csproj.GenerateResource.cache
+D:\University\ProP\ProP-Status\ProP-Status\obj\Debug\ProP-Status.exe
+D:\University\ProP\ProP-Status\ProP-Status\obj\Debug\ProP-Status.pdb
+D:\University\ProP\ProP-Status\ProP-Status\bin\Debug\MySql.Data.dll
+D:\University\ProP\ProP-Status\ProP-Status\obj\Debug\ProP-Status.csproj.CopyComplete
