@@ -42,17 +42,20 @@ namespace CampingEntranceApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(currentTicket.TicketType==3)
-            {
-                if (currentUser.Camp_id == currentCamping.ID)
+           
+                if (currentTicket.TicketType == 3)
                 {
-                    MessageBox.Show("Visitor has a camping spot!");
+                    if (currentUser.Camp_id == currentCamping.ID)
+                    {
+                        if (currentCamping.Availability > 0)
+                        { MessageBox.Show("Visitor has a camping spot!"); }
+                    }
                 }
-            }
-            else
-            {
-                MessageBox.Show("This Visitor does not have a camping spot!");
-            }
+                else
+                {
+                    MessageBox.Show("This Visitor does not have a camping spot!");
+                }
+            
         }
 
         private void HandleTag(object sender, RFIDTagEventArgs e)
